@@ -1,0 +1,71 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: CatalystX Validator
+email: contact@s3rdv.com
+description: >-
+  Professional Solana validator focused on network stability and security.
+  A Marinade Select program member delivering institutional-grade validation
+  services and contributing to the DoubleZero protocol.
+baseurl: ""
+url: "https://catalystx.sol"
+alternate_domains:
+  - "https://catalystxsol.com"
+  - "https://www.catalystxsol.com"
+twitter_username: CatalystX_SOL
+github_username: T3chie-404
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Custom settings
+author: CatalystX Validator
+powered_by: S3RDV LLC
+timezone: UTC
+show_excerpts: false
+show_posts: false
+
+# Navigation
+header_pages:
+  - about.md
+  - services.md
+  - statistics.md
+  - contact.md
+
+# SEO settings
+twitter:
+  username: CatalystX_SOL
+  card: summary_large_image
+
+# Exclude files
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+  - AI_BOT_LOG.md
+  - _posts/

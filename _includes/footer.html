@@ -1,0 +1,44 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+            <svg class="svg-icon orange">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        {%- if site.author %}
+          <ul class="contact-list">
+            <li class="p-name">{{ site.author | escape }}</li>
+            {%- if site.email %}
+            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {%- endif %}
+          </ul>
+        {%- endif %}
+      </div>
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+      </div>
+    </div>
+
+    <div class="social-links">
+      {%- include social.html -%}
+    </div>
+
+    <div class="powered-by" style="text-align: center; margin-top: 20px; border-top: 1px solid #e8e8e8; padding-top: 20px;">
+      <div style="margin-bottom: 15px; font-size: 0.9em; color: #828282;">
+        <span style="display: inline-block; margin-right: 5px;">🔗</span>
+        <a href="https://catalystx.sol" style="color: #828282; text-decoration: underline; font-weight: bold;">catalystx.sol</a>
+        <span style="margin: 0 8px;">|</span>
+        <a href="https://catalystxsol.com" style="color: #828282; text-decoration: underline;">catalystxsol.com</a>
+      </div>
+      <div style="font-size: 0.85em; color: #828282;">
+        Powered by <a href="https://s3rdv.com" style="color: #828282; text-decoration: underline;">{{ site.powered_by }}</a>
+      </div>
+    </div>
+  </div>
+</footer> 
