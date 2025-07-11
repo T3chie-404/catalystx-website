@@ -4,7 +4,10 @@ title: About CatalystX
 permalink: /about/
 ---
 
-# About CatalystX
+<div class="about-header">
+    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="CatalystX Logo" class="about-logo">
+    <h1>About CatalystX</h1>
+</div>
 
 ## Our Mission
 

@@ -15,12 +15,23 @@ permalink: /services/
 4. Choose your staking amount
 5. Complete the delegation transaction
 
-### Stake via Marinade Finance
-As a Marinade Select validator, you can also stake with us through:
-1. Visit [Marinade Finance](https://marinade.finance)
-2. Connect your wallet
-3. Stake your SOL to receive mSOL
-4. Your stake will be automatically delegated to quality validators like CatalystX
+### Marinade Select Status
+We are proud to be one of only 30 validators chosen for the Marinade Select program, an exclusive institutional-grade staking platform designed to bring institutional investment to Solana. As a Marinade Select validator, we are:
+- Fully KYC verified and operate as a known legal entity
+- Committed to institutional-grade compliance standards
+- Part of a curated group maintaining network decentralization
+- Aligned with institutional security and performance requirements
+- Contributing to Solana's institutional adoption
+
+This prestigious status means we meet the rigorous standards required by:
+- Institutional investors
+- ETF providers
+- Asset managers
+- Regulated financial entities
+
+You can stake with us either:
+1. **Direct Staking**: Using our vote account for native SOL staking (steps above)
+2. **Liquid Staking**: Through Marinade Finance to receive mSOL (separate process)
 
 ## Our Commitment
 

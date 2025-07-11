@@ -21,15 +21,18 @@
 title: CatalystX Validator
 email: contact@s3rdv.com
 description: >-
-  Professional Solana validator focused on network stability, security, and integrity.
+  Professional Solana validator operated by S3RDV LLC, focused on network stability, security, and integrity.
   A Marinade Select program member delivering institutional-grade validation services.
 baseurl: ""
-url: "https://catalystx.sol"
+url: ""
 twitter_username: CatalystX_SOL
 github_username: T3chie-404
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
+  sass_dir: _sass
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -49,12 +52,29 @@ exclude:
 # Custom settings
 show_posts: false
 author: CatalystX Validator
-logo: /assets/images/logo.png # You'll need to add a logo
+logo: /assets/images/logo.png
+
+# Social links
 social:
   name: CatalystX Validator
   links:
     - https://twitter.com/CatalystX_SOL
     - https://github.com/T3chie-404
+
+# Validator information
+validator_info:
+  vote_account: ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx
+  commission: 5%
+  uptime: 99.99%
+  performance_score: 100%
+  locations:
+    primary: "Amsterdam, Netherlands"
+    backup: "Madrid, Spain"
+  hardware:
+    cpu: "AMD EPYC 7543 32-Core Processor"
+    ram: "128GB ECC DDR4"
+    storage: "2TB NVMe SSD"
+    bandwidth: "1Gbps Dedicated"
 
 # SEO settings
 twitter:

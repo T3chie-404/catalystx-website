@@ -4,34 +4,103 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     {% feed_meta %}
     {% seo %}
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="container">
-            <nav>
-                <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+            <nav class="site-nav">
+                <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
                 <div class="nav-links">
-                    <a href="{{ '/about/' | relative_url }}">About</a>
-                    <a href="{{ '/services/' | relative_url }}">Services</a>
-                    <a href="{{ '/statistics/' | relative_url }}">Statistics</a>
-                    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+                    {% for page in site.header_pages %}
+                        {% assign my_page = site.pages | where: "path", page | first %}
+                        {% if my_page.title %}
+                            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        {{ content }}
+    <main class="page-content">
+        <div class="container">
+            {{ content }}
+        </div>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <div>© {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</div>
-            <div>Domains: <a href="https://catalystx.sol">catalystx.sol</a> | <a href="https://catalystxsol.com">catalystxsol.com</a></div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                        <li><a href="{{ '/services' | relative_url }}">Services</a></li>
+                        <li><a href="{{ '/statistics' | relative_url }}">Statistics</a></li>
+                        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Connect</h2>
+                    <ul>
+                        <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
+                        <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+                        <li><a href="mailto:{{ site.email }}">Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>Validator Info</h2>
+                    <ul>
+                        <li>Vote Account: <code>{{ site.validator_info.vote_account }}</code></li>
+                        <li>Commission: {{ site.validator_info.commission }}</li>
+                        <li>Uptime: {{ site.validator_info.uptime }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+                <p class="domains">Domains: <a href="https://catalystx.sol">catalystx.sol</a> | <a href="https://catalystsol.com">catalystsol.com</a></p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add header scroll effect
+        let header = document.querySelector('.site-header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 </html> 
