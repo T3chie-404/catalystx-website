@@ -21,29 +21,45 @@
 title: CatalystX Validator
 email: contact@s3rdv.com
 description: >-
-  Professional Solana validator focused on network stability and security.
-  A Marinade Select program member delivering institutional-grade validation
-  services and contributing to the DoubleZero protocol.
+  Professional Solana validator focused on network stability, security, and integrity.
+  A Marinade Select program member delivering institutional-grade validation services.
 baseurl: ""
 url: "https://catalystx.sol"
-alternate_domains:
-  - "https://catalystxsol.com"
-  - "https://www.catalystxsol.com"
 twitter_username: CatalystX_SOL
 github_username: T3chie-404
 
 # Build settings
-theme: minima
+markdown: kramdown
 plugins:
+  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github
+  - README.md
+  - AI_BOT_LOG.md
+
 # Custom settings
-author: CatalystX Validator
-powered_by: S3RDV LLC
-timezone: UTC
-show_excerpts: false
 show_posts: false
+author: CatalystX Validator
+logo: /assets/images/logo.png # You'll need to add a logo
+social:
+  name: CatalystX Validator
+  links:
+    - https://twitter.com/CatalystX_SOL
+    - https://github.com/T3chie-404
+
+# SEO settings
+twitter:
+  username: CatalystX_SOL
+  card: summary
 
 # Navigation
 header_pages:
@@ -51,21 +67,3 @@ header_pages:
   - services.md
   - statistics.md
   - contact.md
-
-# SEO settings
-twitter:
-  username: CatalystX_SOL
-  card: summary_large_image
-
-# Exclude files
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/
-  - README.md
-  - AI_BOT_LOG.md
-  - _posts/
