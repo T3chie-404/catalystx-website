@@ -1,66 +1,54 @@
 ---
-layout: page
-title: Validator Statistics
-permalink: /stats/
+layout: default
+title: Statistics
+permalink: /statistics/
 ---
 
-# CatalystX Validator Statistics
+# Validator Statistics
 
 ## Live Performance Metrics
 
-Track our validator's performance across multiple platforms:
+### Vote Account
+`ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx`
 
-### Marinade Finance
-[![Marinade Finance Stats](https://app.marinade.finance/network/validators/details/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/)](https://app.marinade.finance/network/validators/details/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/)
-- **Platform**: Marinade Select Program Member
-- **Live Stats**: [View on Marinade](https://app.marinade.finance/network/validators/details/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/)
-- **Status**: Active Institutional Validator
-- **Features**: [Learn about Marinade Select](https://marinade.finance/features/marinade-select)
+### External Statistics
+View our real-time performance metrics on these platforms:
+- [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
+- [Solana Beach](https://solanabeach.io/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
+- [Validators.app](https://www.validators.app/validators/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
 
-### JPool
-[![JPool Stats](https://app.jpool.one/validators/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)](https://app.jpool.one/validators/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
-- **Live Performance**: [View on JPool](https://app.jpool.one/validators/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
-- **Real-time Metrics**: Commission, APY, and Vote Account details
+## Performance Highlights
 
-### Staking Kiwi
-[![Staking Kiwi Stats](https://staking.kiwi/app/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)](https://staking.kiwi/app/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
-- **Detailed Analytics**: [View on Staking Kiwi](https://staking.kiwi/app/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
-- **Performance History**: Skip Rate, Credits, and Stake Distribution
+### Uptime Statistics
+- Target Uptime: 99.9%+
+- Skip Rate: < 1%
+- Block Production: Active participant
+- Commission Rate: Industry standard
 
-## Validator Identity
-- **Address**: `ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx`
-- **Name**: CatalystX
-- **Status**: Active Marinade Select Validator
-- **Identity**: KYC-verified through Marinade Select
-- **MEV Policy**: Zero tolerance for malicious MEV
+### Infrastructure Status
+- Primary DC (Amsterdam): Active
+- Backup DC (Madrid): Standby
+- Network Status: Optimal
+- Last Security Audit: Updated monthly
 
-## Support Our Mission
+### Stake Distribution
+- Total Active Stake: View on [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
+- Marinade Stake: Part of Marinade Select Program
+- Number of Delegators: Updated daily
 
-If you appreciate our commitment to:
-- Network integrity over profit maximization
-- Vanilla software implementation
-- Ecosystem stability and security
-- Ethical operation practices
-- Long-term Solana network health
+## Historical Performance
 
-Consider supporting our mission by staking with us. Your stake helps maintain a secure, stable, and ethical Solana network.
+### Monthly Reports
+We maintain transparent performance records:
+- Skip rate history
+- Uptime percentage
+- Rewards distributed
+- Network participation
 
-### How to Stake
+### Network Contributions
+- Active Testnet Participant
+- DoubleZero Protocol Contributor
+- Regular Protocol Updates
+- Community Support
 
-#### For Institutions and Professional Stakers
-Stake through Marinade Select for enhanced features:
-1. Visit [Marinade Finance](https://app.marinade.finance/)
-2. Connect your wallet and choose your stake amount
-3. Toggle to "Select" mode in the delegation strategy
-4. Benefit from:
-   - KYC-verified validators
-   - Protected rewards
-   - Instant unstake options
-   - SOC 2 compliance
-   - Zero MEV abuse guarantee
-
-#### For Individual Stakers
-You can stake with CatalystX through any of these platforms:
-1. [Marinade Finance](https://app.marinade.finance/network/validators/details/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/) - Liquid Staking
-2. [JPool](https://app.jpool.one/validators/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx) - Direct Staking
-3. [Staking Kiwi](https://staking.kiwi/app/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx) - Analytics and Staking 
+For detailed statistics and real-time updates, please visit our profile on [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx). 
