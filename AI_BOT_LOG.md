@@ -1,5 +1,20 @@
 # AI Development Log
 
+## 2025-07-12: Content Updates and Institutional Positioning
+- **Text Replacement**: Changed "Qualified by Anza" to "SFDP" across all pages
+  - Updated in index.md (line 50)
+  - Updated in about.md (line 31)
+- **Institutional Grade Section Enhancement**: Added comprehensive institutional standards information
+  - Added KYC/KYB compliance mention
+  - Listed target client types: Institutional investors, ETF providers, Asset managers, Regulated financial entities
+  - Added Marinade Finance app link with "Select" toggle instructions
+- **Statistics Page Update**: Added Marinade Finance validator details link
+  - Added to External Statistics section for real-time performance metrics
+- **Website Serving**: Started Jekyll development server with live reload
+  - Running on http://0.0.0.0:4000
+  - Live reload enabled for automatic updates
+  - Host configured for network access
+
 ## 2025-07-11: Major Rebranding and Restructuring
 - Repository renamed from s3rdv_website to catalystx-website
 - Focus shifted to CatalystX Validator brand

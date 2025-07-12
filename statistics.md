@@ -13,9 +13,10 @@ permalink: /statistics/
 
 ### External Statistics
 View our real-time performance metrics on these platforms:
-- [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
-- [Solana Beach](https://solanabeach.io/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
-- [Validators.app](https://www.validators.app/validators/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
+- [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx){:target="_blank"}
+- [Solana Beach](https://solanabeach.io/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx){:target="_blank"}
+- [Validators.app](https://www.validators.app/validators/BNtHBLo1L2vAG7PBQ6mJvWz7GqVPxBnioXsY2Gjtubrg?locale=en&network=mainnet){:target="_blank"}
+- [Marinade Finance](https://app.marinade.finance/network/validators/details/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/){:target="_blank"}
 
 ## Performance Highlights
 
@@ -32,7 +33,7 @@ View our real-time performance metrics on these platforms:
 - Last Security Audit: Updated monthly
 
 ### Stake Distribution
-- Total Active Stake: View on [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
+- Total Active Stake: View on [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx){:target="_blank"}
 - Marinade Stake: Part of Marinade Select Program
 - Number of Delegators: Updated daily
 
@@ -51,4 +52,4 @@ We maintain transparent performance records:
 - Regular Protocol Updates
 - Community Support
 
-For detailed statistics and real-time updates, please visit our profile on [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx). 
+For detailed statistics and real-time updates, please visit our profile on [Stakewiz](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx){:target="_blank"}. 

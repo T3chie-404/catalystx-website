@@ -1,6 +1,10 @@
----
----
-
 @import "minima";
 
 // Custom styles can be added here 
+a, a:visited {
+  color: #FFA726;
+}
+a:hover, a:focus {
+  color: #FFD54F;
+  text-decoration: underline;
+} 

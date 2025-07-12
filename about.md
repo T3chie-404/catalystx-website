@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <div class="about-header">
-    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="CatalystX Logo" class="about-logo">
+    <img src="{{ '/assets/images/ArtificialIntelligence_03.jpg' | relative_url }}" alt="CatalystX Logo" class="about-logo">
     <h1>About CatalystX</h1>
 </div>
 
@@ -29,7 +29,7 @@ CatalystX is dedicated to strengthening the Solana network through professional 
 
 ### Institutional Recognition
 - Selected for Marinade Select Program (Top 30 Validators)
-- Qualified by Anza for Testnet operations
+- SFDP for Testnet operations
 - Active contributor to DoubleZero protocol development
 - Consistent uptime and performance metrics
 
@@ -45,5 +45,5 @@ CatalystX is operated by S3RDV LLC, a team of experienced blockchain professiona
 
 - **Vote Account:** ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx
 - **Email:** contact@s3rdv.com
-- **Twitter:** [@CatalystX_SOL](https://twitter.com/CatalystX_SOL)
-- **GitHub:** [@T3chie-404](https://github.com/T3chie-404) 
+- **Twitter:** [@CatalystX_SOL](https://twitter.com/CatalystX_SOL){:target="_blank"}
+- **GitHub:** [@T3chie-404](https://github.com/T3chie-404){:target="_blank"} 
