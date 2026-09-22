@@ -18,28 +18,28 @@ description: Live CatalystX validator uptime, vote success, active stake, public
   <article class="metric-card"><strong data-live-metric="activated_stake">220K SOL</strong><span>Active stake</span><small>Current delegation</small></article>
   <article class="metric-card"><strong data-live-metric="commission">5%</strong><span>Commission</span><small>Inflation rewards</small></article>
 </section>
-<p class="live-metric-note" data-live-updated>Reference values verified September 21, 2026; live metrics load from StakeWiz.</p>
+<p class="live-metric-note" data-live-updated>Reference values verified September 22, 2026; live metrics load from StakeWiz.</p>
 
 <div class="notice">
   <strong>Why uptime values can differ.</strong>
-  <p>Validator dashboards use different windows and definitions. StakeWiz measures time not delinquent over a rolling 30-day window; other platforms may calculate vote or epoch participation. Check the source and timestamp when comparing values.</p>
+  <p>At the September 22, 2026 check, StakeWiz reported 100% rolling 30-day uptime and no 30-day delinquency records. Marinade samples Solana's vote-account delinquent state and recorded one approximately one-minute delinquency interval in epoch 1032. A sampled vote-account delinquency does not by itself establish a hardware outage.</p>
 </div>
 
 <section class="proof-grid section-block">
   <div class="proof-copy">
-    <p class="eyebrow">Ten completed epochs</p>
-    <h2>99.9956% voting uptime. Zero skipped leader slots.</h2>
-    <p>Across epochs 1029–1038, CatalystX produced all <strong>1,844 of 1,844 scheduled leader slots</strong>. Nine epochs recorded 100% voting uptime; one recorded 59 seconds of downtime.</p>
-    <a class="text-link" href="https://validators-api.marinade.finance/validators?query_vote_accounts=ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx&amp;epochs=11&amp;limit=1" target="_blank" rel="noopener noreferrer">Inspect the Marinade API source <span aria-hidden="true">→</span></a>
+    <p class="eyebrow">Maximum available history</p>
+    <h2>99.9995% average voting uptime. Zero skipped leader slots.</h2>
+    <p>Across epochs 951–1039, CatalystX produced all <strong>17,144 of 17,144 scheduled leader slots</strong>. Marinade observed approximately one minute of vote-account delinquency in epoch 1032; the other 88 completed epochs recorded 100% uptime.</p>
+    <a class="text-link" href="https://validators-api.marinade.finance/validators?query_vote_accounts=ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx&amp;epochs=100&amp;limit=1" target="_blank" rel="noopener noreferrer">Inspect the Marinade API source <span aria-hidden="true">→</span></a>
   </div>
 
   <div class="proof-panel">
-    <div><span>99.9956%</span><small>voting uptime / epochs 1029–1038</small></div>
-    <div><span>0 / 1,844</span><small>skipped / scheduled leader slots</small></div>
-    <div><span>9 / 10</span><small>epochs at 100% voting uptime</small></div>
+    <div><span>99.9995%</span><small>average per-epoch voting uptime</small></div>
+    <div><span>0 / 17,144</span><small>skipped / scheduled leader slots</small></div>
+    <div><span>89 epochs</span><small>completed history available from Marinade</small></div>
   </div>
 </section>
-<p class="section-footnote">Calculated from Marinade's validator API on September 21, 2026. This is a historical measurement, not an uptime SLA.</p>
+<p class="section-footnote">99.9995% is the rounded arithmetic mean of Marinade's per-epoch uptime values for completed epochs 951–1039, retrieved September 22, 2026. Historical measurement, not an uptime SLA.</p>
 
 <section class="proof-grid section-block">
   <div class="proof-copy">
@@ -73,11 +73,12 @@ description: Live CatalystX validator uptime, vote success, active stake, public
 <section class="section-block split-section">
   <div>
     <p class="eyebrow">Infrastructure status</p>
-    <h2>Three-region operating footprint.</h2>
+    <h2>Rotterdam primary with Frankfurt and Madrid standby.</h2>
+    <p>Operator-reported validator transition times are approximately 200 ms for planned failover and approximately 40 seconds for an unplanned emergency failover. These figures are not an SLA.</p>
   </div>
   <div class="location-stack">
     <div class="location-row primary-location"><span>PRIMARY</span><strong>Rotterdam</strong><small>Active validator</small></div>
-    <div class="location-row"><span>BACKUP 01</span><strong>Frankfurt</strong><small>Standby</small></div>
-    <div class="location-row"><span>BACKUP 02</span><strong>Madrid</strong><small>Standby</small></div>
+    <div class="location-row"><span>STANDBY 01</span><strong>Frankfurt</strong><small>Planned + emergency failover</small></div>
+    <div class="location-row"><span>STANDBY 02</span><strong>Madrid</strong><small>Planned + emergency failover</small></div>
   </div>
 </section>

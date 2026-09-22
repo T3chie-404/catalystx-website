@@ -23,7 +23,7 @@ description: SWQoS and staked QUIC forwarding, real-time shred delivery, connect
     </div>
     <div class="network-diagram">
       <div class="network-node network-node-backup">
-        <small>BACKUP 01</small><strong>Frankfurt</strong><span>Germany</span>
+        <small>STANDBY 01</small><strong>Frankfurt</strong><span>Germany</span>
       </div>
       <div class="network-link" aria-hidden="true"></div>
       <div class="network-node network-node-primary">
@@ -31,9 +31,14 @@ description: SWQoS and staked QUIC forwarding, real-time shred delivery, connect
       </div>
       <div class="network-link" aria-hidden="true"></div>
       <div class="network-node network-node-backup">
-        <small>BACKUP 02</small><strong>Madrid</strong><span>Spain</span>
+        <small>STANDBY 02</small><strong>Madrid</strong><span>Spain</span>
       </div>
     </div>
+    <div class="network-failover" aria-label="Operator-reported validator transition times">
+      <div><small>PLANNED FAILOVER</small><strong>~200 ms</strong></div>
+      <div><small>EMERGENCY FAILOVER</small><strong>~40 sec</strong></div>
+    </div>
+    <p class="network-disclaimer">Operator-reported transition times · not an SLA</p>
     <div class="network-output">
       <span>SWQoS</span><span>Live shreds</span><span>RPC paths</span>
     </div>
@@ -41,8 +46,8 @@ description: SWQoS and staked QUIC forwarding, real-time shred delivery, connect
 </section>
 
 <section class="metric-strip" aria-label="Validator performance snapshot">
-  <article class="metric-card"><strong>99.995%+</strong><span>Voting uptime</span><small>Last 10 completed epochs</small></article>
-  <article class="metric-card"><strong>0 / 1,844</strong><span>Skipped leader slots</span><small>Epochs 1029–1038</small></article>
+  <article class="metric-card"><strong>99.9995%</strong><span>Average voting uptime</span><small>89 completed epochs · Marinade</small></article>
+  <article class="metric-card"><strong>0 / 17,144</strong><span>Skipped leader slots</span><small>Epochs 951–1039</small></article>
   <article class="metric-card"><strong>Top 3.11%</strong><span>Vote latency</span><small>#22 of 708 · Sep. 21, 2026 snapshot</small></article>
   <article class="metric-card"><strong data-live-metric="activated_stake">220K SOL</strong><span>Active stake</span><small>Live via StakeWiz</small></article>
 </section>

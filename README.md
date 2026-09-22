@@ -9,7 +9,7 @@ Public website for CatalystX, a Solana validator and validator-backed infrastruc
 - Introductions to already connected RPC and infrastructure providers
 - Direct and pool-based Solana staking
 
-The primary validator is in Rotterdam, with backup capacity in Frankfurt and Madrid.
+The active validator is in Rotterdam, with standby sites in Frankfurt and Madrid. Operator-reported transition times are approximately 200 ms for planned failover and approximately 40 seconds for an unplanned emergency failover; these figures are not an SLA.
 
 ## Local development
 

@@ -47,8 +47,12 @@ validator_info:
   mev_commission: 10%
   locations:
     primary: Rotterdam, Netherlands
-    backup_one: Frankfurt, Germany
-    backup_two: Madrid, Spain
+    standby_one: Frankfurt, Germany
+    standby_two: Madrid, Spain
+  failover:
+    planned: approximately 200 ms
+    emergency: approximately 40 seconds
+    note: operator-reported transition times; not an SLA
   profiles:
     stakewiz: https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx
     jito: https://www.jito.network/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/

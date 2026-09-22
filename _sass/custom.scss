@@ -516,6 +516,44 @@ p {
   background: linear-gradient(90deg, var(--line-strong), var(--green), var(--line-strong));
 }
 
+.network-failover {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.network-failover div {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.8rem 0.2rem 0.65rem;
+}
+
+.network-failover div + div {
+  padding-left: 1rem;
+  border-left: 1px solid var(--line);
+}
+
+.network-failover small,
+.network-disclaimer {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.network-failover strong {
+  color: var(--green-bright);
+  font-family: var(--mono);
+  font-size: 0.95rem;
+}
+
+.network-disclaimer {
+  margin: 0 0 0.85rem;
+  letter-spacing: 0.035em;
+  text-transform: none;
+}
+
 .network-output {
   display: flex;
   gap: 0.5rem;

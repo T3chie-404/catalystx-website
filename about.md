@@ -15,13 +15,13 @@ description: Meet CatalystX, a performance-focused Solana validator and validato
 <section class="proof-grid section-block">
   <div class="proof-copy">
     <p class="eyebrow">Our operating model</p>
-    <h2>A primary with geographic standby capacity.</h2>
-    <p>Rotterdam is our primary validator location. Frankfurt and Madrid provide geographically separate backup capacity for maintenance, incident response, and planned transitions.</p>
+    <h2>Geographic standby with planned and emergency failover.</h2>
+    <p>Rotterdam is the active validator, with geographically separate standby sites in Frankfurt and Madrid. Operator-reported transition times are approximately 200 ms for planned failover and approximately 40 seconds for an unplanned emergency failover. These figures are not an SLA.</p>
   </div>
   <div class="location-stack">
     <div class="location-row primary-location"><span>PRIMARY</span><strong>Rotterdam, NL</strong><small>Validator edge</small></div>
-    <div class="location-row"><span>BACKUP 01</span><strong>Frankfurt, DE</strong><small>Failover capacity</small></div>
-    <div class="location-row"><span>BACKUP 02</span><strong>Madrid, ES</strong><small>Failover capacity</small></div>
+    <div class="location-row"><span>STANDBY 01</span><strong>Frankfurt, DE</strong><small>Planned + emergency failover</small></div>
+    <div class="location-row"><span>STANDBY 02</span><strong>Madrid, ES</strong><small>Planned + emergency failover</small></div>
   </div>
 </section>
 
@@ -36,8 +36,8 @@ description: Meet CatalystX, a performance-focused Solana validator and validato
       <p>We tune infrastructure and network paths for near-one-slot voting, then rely on public dashboards to show the result.</p>
     </article>
     <article class="content-card">
-      <span class="card-kicker">Resilience</span><h3>Regional redundancy</h3>
-      <p>Three European locations provide standby options and reduce dependence on one facility or metro.</p>
+      <span class="card-kicker">Resilience</span><h3>Geographic standby</h3>
+      <p>Three European locations are designed to reduce dependence on one facility or metro.</p>
     </article>
     <article class="content-card">
       <span class="card-kicker">Operations</span><h3>Measured and observable</h3>
