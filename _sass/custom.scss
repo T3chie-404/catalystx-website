@@ -156,10 +156,12 @@ code {
 }
 
 .brand img {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   border: 1px solid var(--line);
   border-radius: 0.7rem;
+  background: #2d3e4c;
+  object-fit: cover;
   box-shadow: 0 0 28px rgba(98, 245, 174, 0.1);
 }
 
