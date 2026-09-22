@@ -1,98 +1,126 @@
 ---
 layout: default
-title: Welcome to CatalystX
+title: Validator-backed Solana infrastructure
+description: SWQoS and staked QUIC forwarding, real-time shred delivery, connected RPC access, and high-performance Solana staking.
 ---
 
-<div class="hero">
-    <div class="hero-content">
-        <h1>Professional Solana Validation</h1>
-        <p>CatalystX is a leading Solana validator committed to maintaining the highest standards of security, performance, and integrity in the Solana ecosystem. We drive innovation for on-chain advancements while ensuring network stability and long-term ecosystem health.</p>
-        <a href="{{ '/services' | relative_url }}" class="cta-button">Start Staking Now</a>
+<section class="hero hero-home">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> CatalystX / Solana mainnet</p>
+    <h1>Staked QUIC in.<br><span>Real-time shreds out.</span></h1>
+    <p class="hero-lede">Trusted transaction forwarding and validator-sourced Solana data for RPC operators, builders, and latency-sensitive users.</p>
+    <div class="hero-actions">
+      <a href="{{ '/services/' | relative_url }}" class="button button-primary">Explore connectivity</a>
+      <a href="{{ '/contact/#infrastructure' | relative_url }}" class="button button-secondary">Talk to an operator</a>
     </div>
-    <div class="hero-image">
-        <picture>
-            <source srcset="{{ '/assets/images/ArtificialIntelligence_03.webp' | relative_url }}" type="image/webp">
-            <img src="{{ '/assets/images/ArtificialIntelligence_03.web.jpg' | relative_url }}" alt="Next Generation Validation" class="hero-illustration">
-        </picture>
-    </div>
-</div>
+    <p class="hero-footnote">Rotterdam primary <span aria-hidden="true">·</span> Frankfurt + Madrid standby</p>
+  </div>
 
-<div class="stats-grid">
-    <div class="stat-card">
-        <div class="stat-value">99.99%</div>
-        <div class="stat-label">Uptime</div>
+  <div class="network-card" aria-label="CatalystX infrastructure footprint">
+    <div class="network-card-header">
+      <span>Validator network</span>
+      <span class="network-live"><span class="status-dot" aria-hidden="true"></span> Solana mainnet</span>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">5%</div>
-        <div class="stat-label">Commission</div>
+    <div class="network-diagram">
+      <div class="network-node network-node-backup">
+        <small>BACKUP 01</small><strong>Frankfurt</strong><span>Germany</span>
+      </div>
+      <div class="network-link" aria-hidden="true"></div>
+      <div class="network-node network-node-primary">
+        <small>PRIMARY</small><strong>Rotterdam</strong><span>Validator edge</span>
+      </div>
+      <div class="network-link" aria-hidden="true"></div>
+      <div class="network-node network-node-backup">
+        <small>BACKUP 02</small><strong>Madrid</strong><span>Spain</span>
+      </div>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">100%</div>
-        <div class="stat-label">Performance Score</div>
+    <div class="network-output">
+      <span>SWQoS</span><span>Live shreds</span><span>RPC paths</span>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">Top 30</div>
-        <div class="stat-label">Marinade Select</div>
-    </div>
-</div>
+  </div>
+</section>
 
-<div class="features">
-    <div class="feature">
-        <h3>🌟 Support Ethical Validation</h3>
-        <p>If you believe in a stable, secure, and ethically operated Solana network, consider staking with CatalystX. Your stake helps maintain a validator network that prioritizes ecosystem health over short-term profits.</p>
+<section class="metric-strip" aria-label="Validator performance snapshot">
+  <article class="metric-card"><strong>99.995%+</strong><span>Voting uptime</span><small>Last 10 completed epochs</small></article>
+  <article class="metric-card"><strong>0 / 1,844</strong><span>Skipped leader slots</span><small>Epochs 1029–1038</small></article>
+  <article class="metric-card"><strong>Top 3.11%</strong><span>Vote latency</span><small>#22 of 708 · Sep. 21, 2026 snapshot</small></article>
+  <article class="metric-card"><strong data-live-metric="activated_stake">220K SOL</strong><span>Active stake</span><small>Live via StakeWiz</small></article>
+</section>
+<p class="live-metric-note" data-live-updated>Live validator metrics supplied by StakeWiz.</p>
+
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">Closer to the validator</p>
+    <h2>Three ways to build a faster path into Solana.</h2>
+    <p>Use our validator's network position directly, or let us connect you with infrastructure that already does.</p>
+  </div>
+  <div class="service-grid">
+    <article class="service-card">
+      <span class="service-index">01</span><p class="service-audience">For RPC operators</p>
+      <h3>Staked QUIC forwarding</h3>
+      <p>Route vetted transaction traffic through CatalystX's trusted, stake-weighted path for SWQoS-aware forwarding toward current and upcoming leaders.</p>
+      <a href="{{ '/services/#swqos' | relative_url }}">Explore SWQoS <span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="service-card">
+      <span class="service-index">02</span><p class="service-audience">For data infrastructure</p>
+      <h3>Real-time shred delivery</h3>
+      <p>Receive validator-sourced shreds over a direct delivery path designed for trading systems, indexers, and real-time data pipelines.</p>
+      <a href="{{ '/services/#shreds' | relative_url }}">Explore shred delivery <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="service-card">
+      <span class="service-index">03</span><p class="service-audience">For builders and users</p>
+      <h3>Connected RPC access</h3>
+      <p>Tell us what you are building. We can match you with an RPC or infrastructure provider already connected to our validator path.</p>
+      <a href="{{ '/services/#rpc-access' | relative_url }}">Find the right path <span aria-hidden="true">→</span></a>
+    </article>
+  </div>
+</section>
+
+<section class="proof-grid section-block">
+  <div class="proof-copy">
+    <p class="eyebrow">Performance you can inspect</p>
+    <h2>Top 3.11% vote latency in the September 21, 2026 Shinobi snapshot.</h2>
+    <p>CatalystX ranked <strong>#22 of 708 validators</strong> at <strong>1.019011 slots</strong> of average vote latency. Pool allocation and rank change each epoch, so we link current data instead of freezing a permanent top-20 claim.</p>
+    <div class="inline-links">
+      <a href="{{ site.validator_info.profiles.shinobi }}" target="_blank" rel="noopener noreferrer">View Shinobi validators</a>
+      <a href="{{ site.validator_info.profiles.stakewiz }}" target="_blank" rel="noopener noreferrer">Open live metrics</a>
     </div>
+  </div>
+  <div class="proof-panel">
+    <div><span>1.019011</span><small>average vote latency / slots</small></div>
+    <div><span>#22 / 708</span><small>September 21, 2026 xSHIN snapshot</small></div>
+    <div><span>5%</span><small>validator commission</small></div>
+  </div>
+</section>
 
-    <div class="feature">
-        <h3>🔧 Enterprise Infrastructure</h3>
-        <ul>
-            <li><strong>Vote Account:</strong> <code class="vote-account">ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx</code></li>
-            <li><strong>Infrastructure:</strong> Redundant servers in Amsterdam (main) and Madrid (backup)</li>
-            <li><strong>Philosophy:</strong> Strict vanilla file software implementation - we reject custom modifications that could harm network stability</li>
-            <li><strong>Network Participation:</strong> Active on both Mainnet and Testnet (SFDP)</li>
-        </ul>
-    </div>
+<section class="section-block">
+  <div class="section-heading compact">
+    <p class="eyebrow">Delegation and recognition</p>
+    <h2>Selected across leading validator programs and performance pools.</h2>
+  </div>
+  <div class="badge-grid">
+    <a class="badge-card" href="https://select.marinade.finance/" target="_blank" rel="noopener noreferrer">
+      <span class="badge-mark">M</span><span><strong>Marinade Select</strong><small>Institutional validator set</small></span>
+    </a>
+    <a class="badge-card" href="{{ site.validator_info.profiles.shinobi }}" target="_blank" rel="noopener noreferrer">
+      <span class="badge-mark">S</span><span><strong>Shinobi Performance Pool</strong><small>Performance-based delegation</small></span>
+    </a>
+    <a class="badge-card" href="{{ site.validator_info.profiles.jito }}" target="_blank" rel="noopener noreferrer">
+      <span class="badge-mark">J</span><span><strong>JitoSOL</strong><small>Active validator set</small></span>
+    </a>
+  </div>
+  <p class="section-footnote">Pool allocations and rankings can change by epoch.</p>
+</section>
 
-    <div class="feature">
-        <h3>🏆 Institutional Grade</h3>
-        <p>We are proud to be one of 30 validators selected for the Marinade Select program, offering institutional-grade staking services with a focus on:</p>
-        <ul>
-            <li>Network stability and integrity</li>
-            <li>High-performance without compromising security</li>
-            <li>Ethical operation practices</li>
-            <li>Long-term ecosystem health over short-term profits</li>
-            <li>Comprehensive KYC/KYB compliance for institutional clients</li>
-        </ul>
-        <p>This prestigious status means we meet the rigorous standards required by:</p>
-        <ul>
-            <li>Institutional investors</li>
-            <li>ETF providers</li>
-            <li>Asset managers</li>
-            <li>Regulated financial entities</li>
-        </ul>
-        <p><strong>Stake with us:</strong> Use the <a href="https://app.marinade.finance/network/validators" target="_blank">Marinade Finance app</a> and select the "Select" toggle option to access institutional-grade validators like CatalystX.</p>
-    </div>
-</div>
-
-<div class="feature">
-    <h3>🔗 Protocol Contributions</h3>
-    <p>We actively contribute to innovative protocols that advance the Solana ecosystem:</p>
-</div>
-
-<div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 15px;">
-    <img src="{{ '/assets/images/Xandeum_logo_wide.png' | relative_url }}" alt="Xandeum Logo" style="max-width: 100%; height: 100px; margin-bottom: 10px;">
-    <p style="margin: 0; text-align: center;">Contributing to Xandeum's scalable storage layer that extends Solana's native account model with an integrated file system. Xandeum enables storage-enabled dapps (SEDApps) by providing blockchain-grade, decentralized storage with random access capabilities while maintaining on-chain verifiability. Learn more at <a href="https://xandeum.network/" target="_blank">Xandeum</a>.</p>
-</div>
-
-<div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 15px;">
-    <img src="{{ '/assets/images/doublezero-logo.svg' | relative_url }}" alt="DoubleZero Logo" style="height: 70px; width: auto; margin-bottom: 10px;">
-    <p style="margin: 0; text-align: center;">Active contributor to the DoubleZero protocol, helping shape the future of Solana's DeFi ecosystem. DoubleZero is creating the first dedicated physical infrastructure layer for blockchain communication, addressing fundamental bottlenecks that software alone cannot solve. Learn more about our contributions at <a href="https://doublezero.xyz/" target="_blank">DoubleZero</a>.</p>
-</div>
-
-<div class="cta-section">
-    <h2>Ready to Start Staking?</h2>
-    <p>Join the growing number of delegators who trust CatalystX for their Solana staking needs.</p>
-    <div class="cta-buttons">
-        <a href="{{ '/services' | relative_url }}" class="cta-button">Start Staking</a>
-        <a href="{{ '/contact' | relative_url }}" class="cta-button secondary">Contact Us</a>
-    </div>
-</div> 
+<section class="cta-band">
+  <div>
+    <p class="eyebrow">Need a better Solana path?</p>
+    <h2>Start with the workload, not a generic plan.</h2>
+    <p>Tell us your region, traffic profile, and latency target. We will map the right validator, shred, or RPC path.</p>
+  </div>
+  <div class="hero-actions">
+    <a href="{{ '/contact/#infrastructure' | relative_url }}" class="button button-primary">Discuss infrastructure</a>
+    <a href="{{ '/services/#staking' | relative_url }}" class="button button-secondary">Stake with CatalystX</a>
+  </div>
+</section>

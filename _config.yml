@@ -1,30 +1,10 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: CatalystX Validator
+title: CatalystX
 email: contact@s3rdv.com
 description: >-
-  Professional Solana validator operated by S3RDV LLC, focused on network stability, security, and integrity.
-  A Marinade Select program member delivering institutional-grade validation services.
-baseurl: ""
-url: "https://catalystxsol.com"
+  Validator-backed Solana infrastructure for SWQoS and staked QUIC forwarding,
+  real-time shred delivery, connected RPC access, and high-performance staking.
+baseurl: ''
+url: https://catalystxsol.com
 twitter_username: CatalystX_SOL
 github_username: T3chie-404
 
@@ -49,41 +29,39 @@ exclude:
   - README.md
   - AI_BOT_LOG.md
 
-# Custom settings
+# Site settings
 show_posts: false
 author: CatalystX Validator
 logo: /assets/images/logo.png
 
-# Social links
 social:
   name: CatalystX Validator
   links:
     - https://twitter.com/CatalystX_SOL
     - https://github.com/T3chie-404
 
-# Validator information
 validator_info:
+  identity_account: BNtHBLo1L2vAG7PBQ6mJvWz7GqVPxBnioXsY2Gjtubrg
   vote_account: ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx
   commission: 5%
-  uptime: 99.99%
-  performance_score: 100%
+  mev_commission: 10%
   locations:
-    primary: "Amsterdam, Netherlands"
-    backup: "Madrid, Spain"
-  hardware:
-    cpu: "AMD EPYC 7543 32-Core Processor"
-    ram: "128GB ECC DDR4"
-    storage: "2TB NVMe SSD"
-    bandwidth: "1Gbps Dedicated"
+    primary: Rotterdam, Netherlands
+    backup_one: Frankfurt, Germany
+    backup_two: Madrid, Spain
+  profiles:
+    stakewiz: https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx
+    jito: https://www.jito.network/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/
+    shinobi: https://xshin.fi/#Validators
+    validator_info: https://validator.info/solana/BNtHBLo1L2vAG7PBQ6mJvWz7GqVPxBnioXsY2Gjtubrg/stakers
 
 # SEO settings
 twitter:
   username: CatalystX_SOL
   card: summary
 
-# Navigation
 header_pages:
-  - about.md
   - services.md
   - statistics.md
+  - about.md
   - contact.md

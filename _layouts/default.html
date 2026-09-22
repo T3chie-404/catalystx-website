@@ -1,107 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <meta name="theme-color" content="#07110f">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     {% feed_meta %}
     {% seo %}
-</head>
-<body>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="site-header">
-        <div class="container">
-            <nav class="site-nav">
-                <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-                <div class="nav-links">
-                    {% for page in site.header_pages %}
-                        {% assign my_page = site.pages | where: "path", page | first %}
-                        {% if my_page.title %}
-                            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </nav>
-        </div>
+      <div class="container header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="CatalystX home">
+          <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" width="42" height="42">
+          <span>
+            <strong>{{ site.title }}</strong>
+            <small>Solana validator infrastructure</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          {% for page_path in site.header_pages %}
+            {% assign nav_page = site.pages | where: "path", page_path | first %}
+            {% if nav_page.title %}
+              <a class="nav-link{% if page.url == nav_page.url %} is-active{% endif %}" href="{{ nav_page.url | relative_url }}"{% if page.url == nav_page.url %} aria-current="page"{% endif %}>{{ nav_page.nav_title | default: nav_page.title }}</a>
+            {% endif %}
+          {% endfor %}
+        </nav>
+      </div>
     </header>
 
-    <main class="page-content">
-        <div class="container">
-            {{ content }}
-        </div>
+    <main class="page-content" id="main-content">
+      <div class="container">
+        {{ content }}
+      </div>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li><a href="{{ '/about' | relative_url }}">About</a></li>
-                        <li><a href="{{ '/services' | relative_url }}">Services</a></li>
-                        <li><a href="{{ '/statistics' | relative_url }}">Statistics</a></li>
-                        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h2>Connect</h2>
-                    <ul>
-                        <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
-                        <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
-                        <li><a href="mailto:{{ site.email }}">Email</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h2>Validator Info</h2>
-                    <ul>
-                        <li>Vote Account: <code>{{ site.validator_info.vote_account }}</code></li>
-                        <li>Commission: {{ site.validator_info.commission }}</li>
-                        <li>Uptime: {{ site.validator_info.uptime }}</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
-                <p class="domains">Domains: <a href="https://catalystx.sol">catalystx.sol</a> | <a href="https://catalystsol.com">catalystsol.com</a></p>
-                <p class="powered-by">Powered by <a href="https://s3rdv.com">S3RDV LLC</a></p>
-            </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="{{ '/' | relative_url }}">
+              <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" width="42" height="42">
+              <span><strong>{{ site.title }}</strong><small>Validator-backed connectivity</small></span>
+            </a>
+            <p>Staked transaction ingress, validator-sourced Solana data, and direct operator access.</p>
+            <p class="footer-status"><span class="status-dot" aria-hidden="true"></span>Rotterdam · Solana mainnet</p>
+          </div>
+
+          <div class="footer-column">
+            <h2>Infrastructure</h2>
+            <ul>
+              <li><a href="{{ '/services/#swqos' | relative_url }}">Staked QUIC / SWQoS</a></li>
+              <li><a href="{{ '/services/#shreds' | relative_url }}">Real-time shreds</a></li>
+              <li><a href="{{ '/services/#rpc-access' | relative_url }}">Connected RPC access</a></li>
+              <li><a href="{{ '/services/#staking' | relative_url }}">Solana staking</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h2>Verify</h2>
+            <ul>
+              <li><a href="{{ site.validator_info.profiles.stakewiz }}" target="_blank" rel="noopener noreferrer">StakeWiz</a></li>
+              <li><a href="{{ site.validator_info.profiles.jito }}" target="_blank" rel="noopener noreferrer">Jito</a></li>
+              <li><a href="{{ site.validator_info.profiles.shinobi }}" target="_blank" rel="noopener noreferrer">Shinobi</a></li>
+              <li><a href="{{ '/statistics/' | relative_url }}">Performance sources</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h2>Connect</h2>
+            <ul>
+              <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+              <li><a href="https://x.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+              <li><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="{{ '/contact/' | relative_url }}">Contact the operator</a></li>
+            </ul>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>© {{ site.time | date: '%Y' }} {{ site.title }} · Operated by <a href="https://s3rdv.com" target="_blank" rel="noopener noreferrer">S3RDV LLC</a></p>
+          <p><a href="https://catalystx.sol">catalystx.sol</a> · <a href="https://catalystxsol.com">catalystxsol.com</a></p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+      (() => {
+        const header = document.querySelector('.site-header');
+        const toggle = document.querySelector('.nav-toggle');
+        const navigation = document.querySelector('.site-nav');
+
+        if (header) {
+          const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 16);
+          updateHeader();
+          window.addEventListener('scroll', updateHeader, { passive: true });
+        }
+
+        if (toggle && navigation) {
+          toggle.addEventListener('click', () => {
+            const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+            navigation.classList.toggle('is-open', !isOpen);
+          });
+
+          navigation.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+              toggle.setAttribute('aria-expanded', 'false');
+              navigation.classList.remove('is-open');
             });
-        });
+          });
+        }
 
-        // Add header scroll effect
-        let header = document.querySelector('.site-header');
-        let lastScroll = 0;
+        const metricNodes = document.querySelectorAll('[data-live-metric]');
+        if (!metricNodes.length) return;
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            if (currentScroll <= 0) {
-                header.classList.remove('scroll-up');
-                return;
-            }
-            
-            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-                header.classList.remove('scroll-up');
-                header.classList.add('scroll-down');
-            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-                header.classList.remove('scroll-down');
-                header.classList.add('scroll-up');
-            }
-            lastScroll = currentScroll;
-        });
+        const voteAccount = '{{ site.validator_info.vote_account }}';
+        const endpoint = 'https://api.stakewiz.com/validator/' + voteAccount;
+        const cleanPercent = (value) => {
+          const number = Number(value);
+          if (!Number.isFinite(number)) return null;
+          return number.toFixed(2).replace(/\.00$/, '').replace(/(\.\d)0$/, '$1') + '%';
+        };
+        const basisPointsPercent = (value) => {
+          let number = Number(value);
+          if (!Number.isFinite(number)) return null;
+          if (number > 100) number /= 100;
+          return cleanPercent(number);
+        };
+        const compactSol = (value) => {
+          const number = Number(value);
+          if (!Number.isFinite(number)) return null;
+          return new Intl.NumberFormat('en-US', {
+            notation: 'compact',
+            maximumFractionDigits: 1
+          }).format(number) + ' SOL';
+        };
+
+        fetch(endpoint, { headers: { Accept: 'application/json' } })
+          .then((response) => {
+            if (!response.ok) throw new Error('StakeWiz request failed');
+            return response.json();
+          })
+          .then((data) => {
+            const values = {
+              uptime: cleanPercent(data.uptime),
+              vote_success: cleanPercent(data.vote_success),
+              activated_stake: compactSol(data.activated_stake),
+              commission: basisPointsPercent(data.commission),
+              version: data.version || null
+            };
+
+            metricNodes.forEach((node) => {
+              const value = values[node.dataset.liveMetric];
+              if (value) node.textContent = value;
+            });
+
+            document.querySelectorAll('[data-live-updated]').forEach((node) => {
+              node.textContent = 'Live validator metrics via StakeWiz · checked ' +
+                new Intl.DateTimeFormat('en-US', {
+                  month: 'short',
+                  day: 'numeric',
+                  year: 'numeric',
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  timeZoneName: 'short'
+                }).format(new Date());
+            });
+          })
+          .catch(() => {
+            document.querySelectorAll('[data-live-updated]').forEach((node) => {
+              node.textContent = 'Reference values verified September 21, 2026 · live StakeWiz refresh unavailable.';
+            });
+          });
+      })();
     </script>
-</body>
-</html> 
+  </body>
+</html>

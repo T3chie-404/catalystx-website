@@ -1,46 +1,39 @@
 # CatalystX Validator Website
 
-This repository contains the website code for CatalystX Validator (catalystx.sol), a professional Solana validator focused on network stability and security.
+Public website for CatalystX, a Solana validator and validator-backed infrastructure operator.
 
-## Project Structure
+## Positioning
 
-```
-catalystx-website/
-├── _includes/          # Custom includes (header, footer, etc.)
-├── _layouts/          # Custom layouts
-├── _site/            # Generated site (not in repo)
-├── assets/           # Static assets
-├── about.md          # About page
-├── services.md       # Services page
-├── statistics.md     # Statistics page
-├── contact.md        # Contact page
-└── index.md          # Homepage
-```
+- SWQoS and staked QUIC forwarding for RPC operators
+- Validator-sourced real-time shred delivery
+- Introductions to already connected RPC and infrastructure providers
+- Direct and pool-based Solana staking
 
-## Development
+The primary validator is in Rotterdam, with backup capacity in Frankfurt and Madrid.
 
-1. Install dependencies:
+## Local development
+
+Install Ruby and Bundler, then run:
+
 ```bash
 bundle install
-```
-
-2. Run the development server:
-```bash
 bundle exec jekyll serve --host 0.0.0.0
 ```
 
-## Deployment
+The generated site is written to `_site/`.
 
-The site is configured to deploy to:
-- Primary: catalystx.sol (Solana Name Service)
-- Secondary: catalystxsol.com
+## Branch and deployment flow
 
-## Links
+- Pushes to `dev` run the Jekyll build check only.
+- Pull requests targeting `main` run the same build check.
+- Pushes to `main` build and deploy to the `gh-pages` branch.
 
-- Vote Account: [ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
-- Twitter: [@CatalystX_SOL](https://twitter.com/CatalystX_SOL)
-- GitHub: [@T3chie-404](https://github.com/T3chie-404)
+The production domains are [catalystx.sol](https://catalystx.sol) and [catalystxsol.com](https://catalystxsol.com).
 
-## Powered By
+## Validator
 
-[S3RDV LLC](https://s3rdv.com) - Professional Solana Infrastructure Provider 
+- [StakeWiz profile](https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx)
+- Vote account: `ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx`
+- Identity account: `BNtHBLo1L2vAG7PBQ6mJvWz7GqVPxBnioXsY2Gjtubrg`
+
+Operated by [S3RDV LLC](https://s3rdv.com).

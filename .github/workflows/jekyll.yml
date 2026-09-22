@@ -4,9 +4,17 @@ on:
   push:
     branches:
       - main
+      - dev
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -16,17 +24,14 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+          bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --trace
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy production site
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site 
+          publish_dir: ./_site
