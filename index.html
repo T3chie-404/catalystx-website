@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07110f">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/ArtificialIntelligence_03.svg">
+    <link rel="icon" type="image/webp" href="/assets/images/ArtificialIntelligence_03.webp">
+    <link rel="apple-touch-icon" href="/assets/images/ArtificialIntelligence_03.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link type="application/atom+xml" rel="alternate" href="https://catalystxsol.com/feed.xml" title="CatalystX" />
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Validator-backed Solana infrastructure | CatalystX</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Validator-backed Solana infrastructure" />
+<meta name="author" content="CatalystX Validator" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SWQoS and staked QUIC forwarding, real-time shred delivery, connected RPC access, and high-performance Solana staking." />
+<meta name="twitter:description" property="og:description" content="SWQoS and staked QUIC forwarding, real-time shred delivery, connected RPC access, and high-performance Solana staking." />
+<link rel="canonical" href="https://catalystxsol.com/" />
+<meta property="og:url" content="https://catalystxsol.com/" />
+<meta property="og:site_name" content="CatalystX" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Validator-backed Solana infrastructure" />
+<meta name="twitter:site" content="@CatalystX_SOL" />
+<meta name="twitter:creator" content="@CatalystX Validator" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"CatalystX Validator"},"description":"SWQoS and staked QUIC forwarding, real-time shred delivery, connected RPC access, and high-performance Solana staking.","headline":"Validator-backed Solana infrastructure","name":"CatalystX Validator","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://catalystxsol.com/assets/images/ArtificialIntelligence_03.webp"},"name":"CatalystX Validator"},"sameAs":["https://twitter.com/CatalystX_SOL","https://github.com/T3chie-404"],"url":"https://catalystxsol.com/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="CatalystX home">
+          <img src="/assets/images/ArtificialIntelligence_03.svg" alt="" width="48" height="48">
+          <span>
+            <strong>CatalystX</strong>
+            <small>Solana validator infrastructure</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+          
+            
+            
+              <a class="nav-link" href="/services/">Services</a>
+            
+          
+            
+            
+              <a class="nav-link" href="/statistics/">Performance</a>
+            
+          
+            
+            
+              <a class="nav-link" href="/about/">About</a>
+            
+          
+            
+            
+              <a class="nav-link" href="/contact/">Contact</a>
+            
+          
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content" id="main-content">
+      <div class="container">
+        <section class="hero hero-home">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> CatalystX / Solana mainnet</p>
+    <h1>Staked QUIC in.<br /><span>Real-time shreds out.</span></h1>
+    <p class="hero-lede">Trusted transaction forwarding and validator-sourced Solana data for RPC operators, builders, and latency-sensitive users.</p>
+    <div class="hero-actions">
+      <a href="/services/" class="button button-primary">Explore connectivity</a>
+      <a href="/contact/#infrastructure" class="button button-secondary">Talk to an operator</a>
+    </div>
+    <p class="hero-footnote">Rotterdam primary <span aria-hidden="true">·</span> Frankfurt + Madrid standby</p>
+  </div>
+
+  <div class="network-card" aria-label="CatalystX infrastructure footprint">
+    <div class="network-card-header">
+      <span>Validator network</span>
+      <span class="network-live"><span class="status-dot" aria-hidden="true"></span> Solana mainnet</span>
+    </div>
+    <div class="network-diagram">
+      <div class="network-node network-node-backup">
+        <small>STANDBY 01</small><strong>Frankfurt</strong><span>Germany</span>
+      </div>
+      <div class="network-link" aria-hidden="true"></div>
+      <div class="network-node network-node-primary">
+        <small>PRIMARY</small><strong>Rotterdam</strong><span>Validator edge</span>
+      </div>
+      <div class="network-link" aria-hidden="true"></div>
+      <div class="network-node network-node-backup">
+        <small>STANDBY 02</small><strong>Madrid</strong><span>Spain</span>
+      </div>
+    </div>
+    <div class="network-failover" aria-label="Operator-reported validator transition times">
+      <div><small>PLANNED FAILOVER</small><strong>~200 ms</strong></div>
+      <div><small>EMERGENCY FAILOVER</small><strong>~40 sec</strong></div>
+    </div>
+    <p class="network-disclaimer">Operator-reported transition times · not an SLA</p>
+    <div class="network-output">
+      <span>SWQoS</span><span>Live shreds</span><span>RPC paths</span>
+    </div>
+  </div>
+</section>
+
+<section class="metric-strip" aria-label="Validator performance snapshot">
+  <article class="metric-card"><strong>99.9995%</strong><span>Average voting uptime</span><small>89 completed epochs · Marinade</small></article>
+  <article class="metric-card"><strong>0 / 17,144</strong><span>Skipped leader slots</span><small>Epochs 951–1039</small></article>
+  <article class="metric-card"><strong>Top 3.11%</strong><span>Vote latency</span><small>#22 of 708 · Sep. 21, 2026 snapshot</small></article>
+  <article class="metric-card"><strong data-live-metric="activated_stake">220K SOL</strong><span>Active stake</span><small>Live via StakeWiz</small></article>
+</section>
+<p class="live-metric-note" data-live-updated="">Live validator metrics supplied by StakeWiz.</p>
+
+<section class="section-block">
+  <div class="section-heading">
+    <p class="eyebrow">Closer to the validator</p>
+    <h2>Three ways to build a faster path into Solana.</h2>
+    <p>Use our validator's network position directly, or let us connect you with infrastructure that already does.</p>
+  </div>
+  <div class="service-grid">
+    <article class="service-card">
+      <span class="service-index">01</span><p class="service-audience">For RPC operators</p>
+      <h3>Staked QUIC forwarding</h3>
+      <p>Route vetted transaction traffic through CatalystX's trusted, stake-weighted path for SWQoS-aware forwarding toward current and upcoming leaders.</p>
+      <a href="/services/#swqos">Explore SWQoS <span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="service-card">
+      <span class="service-index">02</span><p class="service-audience">For data infrastructure</p>
+      <h3>Real-time shred delivery</h3>
+      <p>Receive validator-sourced shreds over a direct delivery path designed for trading systems, indexers, and real-time data pipelines.</p>
+      <a href="/services/#shreds">Explore shred delivery <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="service-card">
+      <span class="service-index">03</span><p class="service-audience">For builders and users</p>
+      <h3>Connected RPC access</h3>
+      <p>Tell us what you are building. We can match you with an RPC or infrastructure provider already connected to our validator path.</p>
+      <a href="/services/#rpc-access">Find the right path <span aria-hidden="true">→</span></a>
+    </article>
+  </div>
+</section>
+
+<section class="proof-grid section-block">
+  <div class="proof-copy">
+    <p class="eyebrow">Performance you can inspect</p>
+    <h2>Top 3.11% vote latency in the September 21, 2026 Shinobi snapshot.</h2>
+    <p>CatalystX ranked <strong>#22 of 708 validators</strong> at <strong>1.019011 slots</strong> of average vote latency. Pool allocation and rank change each epoch, so we link current data instead of freezing a permanent top-20 claim.</p>
+    <div class="inline-links">
+      <a href="https://xshin.fi/#Validators" target="_blank" rel="noopener noreferrer">View Shinobi validators</a>
+      <a href="https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx" target="_blank" rel="noopener noreferrer">Open live metrics</a>
+    </div>
+  </div>
+  <div class="proof-panel">
+    <div><span>1.019011</span><small>average vote latency / slots</small></div>
+    <div><span>#22 / 708</span><small>September 21, 2026 xSHIN snapshot</small></div>
+    <div><span>5%</span><small>validator commission</small></div>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="section-heading compact">
+    <p class="eyebrow">Delegation and recognition</p>
+    <h2>Selected across leading validator programs and performance pools.</h2>
+  </div>
+  <div class="badge-grid">
+    <a class="badge-card" href="https://select.marinade.finance/" target="_blank" rel="noopener noreferrer">
+      <span class="badge-mark">M</span><span><strong>Marinade Select</strong><small>Institutional validator set</small></span>
+    </a>
+    <a class="badge-card" href="https://xshin.fi/#Validators" target="_blank" rel="noopener noreferrer">
+      <span class="badge-mark">S</span><span><strong>Shinobi Performance Pool</strong><small>Performance-based delegation</small></span>
+    </a>
+    <a class="badge-card" href="https://www.jito.network/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/" target="_blank" rel="noopener noreferrer">
+      <span class="badge-mark">J</span><span><strong>JitoSOL</strong><small>Active validator set</small></span>
+    </a>
+  </div>
+  <p class="section-footnote">Pool allocations and rankings can change by epoch.</p>
+</section>
+
+<section class="cta-band">
+  <div>
+    <p class="eyebrow">Need a better Solana path?</p>
+    <h2>Start with the workload, not a generic plan.</h2>
+    <p>Tell us your region, traffic profile, and latency target. We will map the right validator, shred, or RPC path.</p>
+  </div>
+  <div class="hero-actions">
+    <a href="/contact/#infrastructure" class="button button-primary">Discuss infrastructure</a>
+    <a href="/services/#staking" class="button button-secondary">Stake with CatalystX</a>
+  </div>
+</section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/">
+              <img src="/assets/images/ArtificialIntelligence_03.svg" alt="" width="48" height="48">
+              <span><strong>CatalystX</strong><small>Validator-backed connectivity</small></span>
+            </a>
+            <p>Staked transaction ingress, validator-sourced Solana data, and direct operator access.</p>
+            <p class="footer-status"><span class="status-dot" aria-hidden="true"></span>Rotterdam · Solana mainnet</p>
+          </div>
+
+          <div class="footer-column">
+            <h2>Infrastructure</h2>
+            <ul>
+              <li><a href="/services/#swqos">Staked QUIC / SWQoS</a></li>
+              <li><a href="/services/#shreds">Real-time shreds</a></li>
+              <li><a href="/services/#rpc-access">Connected RPC access</a></li>
+              <li><a href="/services/#staking">Solana staking</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h2>Verify</h2>
+            <ul>
+              <li><a href="https://stakewiz.com/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx" target="_blank" rel="noopener noreferrer">StakeWiz</a></li>
+              <li><a href="https://www.jito.network/validator/ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx/" target="_blank" rel="noopener noreferrer">Jito</a></li>
+              <li><a href="https://xshin.fi/#Validators" target="_blank" rel="noopener noreferrer">Shinobi</a></li>
+              <li><a href="/statistics/">Performance sources</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h2>Connect</h2>
+            <ul>
+              <li><a href="mailto:contact@s3rdv.com">contact@s3rdv.com</a></li>
+              <li><a href="https://x.com/CatalystX_SOL" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+              <li><a href="https://github.com/T3chie-404" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="/contact/">Contact the operator</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 CatalystX · Operated by <a href="https://s3rdv.com" target="_blank" rel="noopener noreferrer">S3RDV LLC</a></p>
+          <p><a href="https://catalystx.sol">catalystx.sol</a> · <a href="https://catalystxsol.com">catalystxsol.com</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const header = document.querySelector('.site-header');
+        const toggle = document.querySelector('.nav-toggle');
+        const navigation = document.querySelector('.site-nav');
+
+        if (header) {
+          const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 16);
+          updateHeader();
+          window.addEventListener('scroll', updateHeader, { passive: true });
+        }
+
+        if (toggle && navigation) {
+          toggle.addEventListener('click', () => {
+            const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+            navigation.classList.toggle('is-open', !isOpen);
+          });
+
+          navigation.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+              toggle.setAttribute('aria-expanded', 'false');
+              navigation.classList.remove('is-open');
+            });
+          });
+        }
+
+        const metricNodes = document.querySelectorAll('[data-live-metric]');
+        if (!metricNodes.length) return;
+
+        const voteAccount = 'ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx';
+        const endpoint = 'https://api.stakewiz.com/validator/' + voteAccount;
+        const cleanPercent = (value) => {
+          const number = Number(value);
+          if (!Number.isFinite(number)) return null;
+          return number.toFixed(2).replace(/\.00$/, '').replace(/(\.\d)0$/, '$1') + '%';
+        };
+        const basisPointsPercent = (value) => {
+          let number = Number(value);
+          if (!Number.isFinite(number)) return null;
+          if (number > 100) number /= 100;
+          return cleanPercent(number);
+        };
+        const compactSol = (value) => {
+          const number = Number(value);
+          if (!Number.isFinite(number)) return null;
+          return new Intl.NumberFormat('en-US', {
+            notation: 'compact',
+            maximumFractionDigits: 1
+          }).format(number) + ' SOL';
+        };
+
+        fetch(endpoint, { headers: { Accept: 'application/json' } })
+          .then((response) => {
+            if (!response.ok) throw new Error('StakeWiz request failed');
+            return response.json();
+          })
+          .then((data) => {
+            const values = {
+              uptime: cleanPercent(data.uptime),
+              vote_success: cleanPercent(data.vote_success),
+              activated_stake: compactSol(data.activated_stake),
+              commission: basisPointsPercent(data.commission),
+              version: data.version || null
+            };
+
+            metricNodes.forEach((node) => {
+              const value = values[node.dataset.liveMetric];
+              if (value) node.textContent = value;
+            });
+
+            document.querySelectorAll('[data-live-updated]').forEach((node) => {
+              node.textContent = 'Live validator metrics via StakeWiz · checked ' +
+                new Intl.DateTimeFormat('en-US', {
+                  month: 'short',
+                  day: 'numeric',
+                  year: 'numeric',
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  timeZoneName: 'short'
+                }).format(new Date());
+            });
+          })
+          .catch(() => {
+            document.querySelectorAll('[data-live-updated]').forEach((node) => {
+              node.textContent = 'Reference values verified September 21, 2026 · live StakeWiz refresh unavailable.';
+            });
+          });
+      })();
+    </script>
+  </body>
+</html>
